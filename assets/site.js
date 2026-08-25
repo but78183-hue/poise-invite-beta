@@ -219,7 +219,7 @@ function applyLanguage(language, updateUrl = false) {
   languageSelect.value = language;
   const officialSiteLink = document.querySelector("[data-official-site-link]");
   if (officialSiteLink) {
-    const isLocal = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+    const isLocal = ["localhost", "127.0.0.1"].includes(window.location.hostname) || window.location.port === "4180";
     const siteUrl = new URL(officialSiteLink.href);
     if (isLocal) {
       siteUrl.protocol = window.location.protocol;
