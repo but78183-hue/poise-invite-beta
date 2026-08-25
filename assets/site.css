@@ -25,8 +25,10 @@ a { color: inherit; }
 .topbar-inner { min-height: 76px; }
 .topbar-actions { align-items: center; display: flex; gap: 22px; }
 .brand { align-items: center; display: inline-flex; gap: 10px; text-decoration: none; }
-.brand-mark { align-items: center; background: var(--mint); border-radius: 50%; color: var(--ink); display: inline-flex; font-weight: 900; height: 32px; justify-content: center; width: 32px; }
+.brand-logo { display: block; height: 36px; object-fit: cover; width: 36px; }
+.brand-copy { min-width: 0; }
 .brand strong, .brand small { display: block; line-height: 1.1; }
+.brand strong { color: #e8cf97; font-family: Georgia, "Times New Roman", serif; font-size: 1.22rem; letter-spacing: 0; }
 .brand small { color: var(--muted); font-size: 0.7rem; letter-spacing: 0.08em; margin-top: 4px; text-transform: uppercase; }
 nav { color: var(--muted); display: flex; font-size: 0.86rem; gap: 20px; }
 nav a { text-decoration-color: transparent; text-underline-offset: 5px; }
