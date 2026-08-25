@@ -43,6 +43,11 @@ nav a:hover, nav a:focus-visible { color: var(--paper); text-decoration-color: v
 .hero::after { border: 1px solid rgba(169, 228, 189, 0.18); border-radius: 50%; content: ""; height: 620px; position: absolute; right: -360px; top: -110px; width: 620px; }
 .hero-layout { align-items: center; display: grid; gap: 88px; grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr); position: relative; z-index: 1; }
 .hero-copy { min-width: 0; }
+.hero-topline { align-items: center; display: flex; flex-wrap: wrap; gap: 18px; justify-content: space-between; margin-bottom: 18px; }
+.hero-topline .eyebrow { margin-bottom: 0; }
+.hero-exchange { align-items: center; border-left: 1px solid var(--line); display: flex; gap: 10px; padding-left: 16px; }
+.hero-exchange span { color: var(--muted); font-size: 0.62rem; font-weight: 800; letter-spacing: 0.1em; line-height: 1.25; max-width: 94px; text-align: right; }
+.hero-exchange img { display: block; filter: invert(1); height: auto; width: 76px; }
 .eyebrow { color: #43845e; font-size: 0.72rem; font-weight: 850; letter-spacing: 0.13em; margin: 0 0 16px; text-transform: uppercase; }
 .hero .eyebrow, .contribution .eyebrow { color: var(--mint); }
 h1, h2, h3 { letter-spacing: 0; line-height: 1.06; margin: 0; }
@@ -110,6 +115,8 @@ footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.8r
 [dir="rtl"] .journey-list li + li { border-left: 0; border-right: 1px solid #bdc3ba; padding-left: 28px; padding-right: 28px; }
 [dir="rtl"] .invitation-note { border-left: 0; border-right: 3px solid #127446; padding-left: 0; padding-right: 28px; }
 [dir="rtl"] .hero::after { left: -360px; right: auto; }
+[dir="rtl"] .hero-exchange { border-left: 0; border-right: 1px solid var(--line); padding-left: 0; padding-right: 16px; }
+[dir="rtl"] .hero-exchange span { text-align: left; }
 
 @media (max-width: 860px) {
   .hero { min-height: auto; padding: 76px 0; }
@@ -133,6 +140,10 @@ footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.8r
   .topbar-actions { align-items: center; flex-direction: row; gap: 0; margin-left: auto; width: auto; }
   .language-select { align-self: center; }
   .hero { padding: 64px 0; }
+  .hero-topline { align-items: flex-start; flex-direction: column; gap: 14px; }
+  .hero-exchange, [dir="rtl"] .hero-exchange { border-left: 0; border-right: 0; padding-left: 0; padding-right: 0; }
+  .hero-exchange span, [dir="rtl"] .hero-exchange span { max-width: none; text-align: left; }
+  .hero-exchange img { width: 86px; }
   h1 { font-size: clamp(2.85rem, 16vw, 4.1rem); }
   h2 { font-size: clamp(2rem, 11vw, 2.8rem); }
   .lead { font-size: 1rem; }
