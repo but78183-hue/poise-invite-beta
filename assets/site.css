@@ -69,6 +69,8 @@ h3 { font-size: 1.15rem; }
 .cohort-panel dl div { border-top: 1px solid var(--line); display: grid; gap: 18px; grid-template-columns: 0.8fr 1.2fr; padding: 13px 0; }
 .cohort-panel dt { color: var(--muted); font-size: 0.76rem; }
 .cohort-panel dd { font-size: 0.88rem; margin: 0; }
+.cohort-panel .exchange-name { color: #e8cf97; font-weight: 800; }
+.exchange-note { color: var(--muted); font-size: 0.74rem; line-height: 1.45; margin: 18px 0 0; max-width: 290px; }
 
 .section { background: var(--paper); color: var(--ink); padding: 104px 0; }
 .benefit-grid { border-top: 1px solid #c7cbc2; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 48px; }
