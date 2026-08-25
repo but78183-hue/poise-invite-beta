@@ -57,7 +57,9 @@ h3 { font-size: 1.15rem; }
 .offer-note { color: var(--muted); font-size: 0.83rem; margin: 15px 0 0; }
 .cohort-panel { border-left: 1px solid var(--line); min-width: 0; padding: 14px 0 14px 42px; }
 .card-label { color: var(--muted); font-size: 0.7rem; letter-spacing: 0.12em; margin: 0 0 22px; }
+.access-amount { align-items: flex-end; direction: ltr; display: inline-flex; gap: 8px; }
 .access-number { color: var(--mint); font-size: clamp(5.8rem, 10vw, 8.4rem); font-weight: 850; letter-spacing: 0; line-height: 0.8; }
+.access-day-unit { color: var(--mint); font-size: 0.92rem; font-weight: 800; line-height: 1; padding-bottom: 2px; }
 .access-unit { font-size: 1.1rem; margin: 16px 0 32px; max-width: 220px; }
 .cohort-panel dl { margin: 0; }
 .cohort-panel dl div { border-top: 1px solid var(--line); display: grid; gap: 18px; grid-template-columns: 0.8fr 1.2fr; padding: 13px 0; }
