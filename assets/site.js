@@ -192,18 +192,26 @@ const translations = {
 const supportedLanguages = Object.keys(translations);
 const languageSwitch = document.querySelector(".site-language-switch");
 
+function normalizeLanguage(value) {
+  if (!value) return null;
+  const normalized = value.replace("_", "-").toLowerCase();
+  if (normalized === "zh-hant" || normalized.startsWith("zh-")) return "zh-Hant";
+  return supportedLanguages.find((language) => normalized === language.toLowerCase() || normalized.startsWith(`${language.toLowerCase()}-`)) || null;
+}
+
 function preferredLanguage() {
-  const queryLanguage = new URLSearchParams(window.location.search).get("lang");
-  const storedLanguage = window.localStorage.getItem("poise.site.language");
-  const browserLanguage = navigator.language;
-  const browserMatch = supportedLanguages.find((language) => browserLanguage === language || browserLanguage.startsWith(`${language}-`));
-  return [queryLanguage, storedLanguage, browserMatch, "en"].find((language) => supportedLanguages.includes(language));
+  const queryLanguage = normalizeLanguage(new URLSearchParams(window.location.search).get("lang"));
+  const storedLanguage = normalizeLanguage(window.localStorage.getItem("poise.site.language"));
+  const browserMatch = (navigator.languages || [navigator.language]).map(normalizeLanguage).find(Boolean);
+  return queryLanguage || storedLanguage || browserMatch || "en";
 }
 
 function applyLanguage(language, updateUrl = false) {
   const copy = translations[language] || translations.en;
   document.documentElement.lang = language;
   document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+  const browserLocale = navigator.languages?.[0] || navigator.language || "";
+  document.documentElement.dataset.audienceRegion = browserLocale.match(/[-_]([a-z]{2}|\d{3})\b/i)?.[1]?.toUpperCase() || "GLOBAL";
   document.title = copy.metaTitle;
   document.querySelector('meta[name="description"]').setAttribute("content", copy.metaDescription);
   document.querySelector('meta[property="og:title"]').setAttribute("content", copy.metaTitle);
