@@ -49,6 +49,7 @@ h1, h2, h3 { letter-spacing: 0; line-height: 1.06; margin: 0; }
 h1 { font-size: clamp(3.1rem, 6.5vw, 5.6rem); max-width: 780px; }
 .hero-title-punctuation { display: inline-block; position: relative; top: 0.14em; }
 h2 { font-size: clamp(2.15rem, 4vw, 3.65rem); max-width: 840px; }
+.included-heading { max-width: 760px; }
 h3 { font-size: 1.15rem; }
 .lead { color: #dae6de; font-size: 1.12rem; margin: 28px 0; max-width: 690px; }
 .actions { align-items: center; display: flex; flex-wrap: wrap; gap: 22px; }
