@@ -1,7 +1,7 @@
 const en = {
   metaTitle: "POiSE Incubator | Private pilot",
   metaDescription: "POiSE Incubator is a limited private pilot for people helping shape the next POiSE App release.",
-  skipLink: "Skip to content", brandAria: "POiSE Incubator", brandSubtitle: "Incubator",
+  skipLink: "Skip to content", brandAria: "POiSE Incubator", brandSubtitle: "Incubator", officialSiteLink: "Website",
   navAria: "Primary", navIncluded: "What’s included", navJourney: "How it works", navApply: "Apply", languageLabel: "Choose language",
   heroExchangeLabel: "SUPPORTED PILOT EXCHANGE",
   heroEyebrow: "POiSE INCUBATOR · PRIVATE PILOT", heroTitle: "Your participation and feedback benefit everyone", heroTitlePunctuation: "…",
@@ -35,7 +35,7 @@ const translations = {
   "zh-Hant": {
     ...en,
     metaTitle: "POiSE 孵化計畫｜私人測試", metaDescription: "POiSE 孵化計畫是一項限量私人測試，邀請參與者共同完善下一版本的 POiSE App。",
-    skipLink: "跳至主要內容", brandAria: "POiSE 孵化計畫", brandSubtitle: "孵化計畫",
+    skipLink: "跳至主要內容", brandAria: "POiSE 孵化計畫", brandSubtitle: "孵化計畫", officialSiteLink: "官網",
     navAria: "主要導覽", navIncluded: "參與者權益", navJourney: "參與方式", navApply: "申請", languageLabel: "選擇語言",
     heroExchangeLabel: "本次 PILOT 支援的交易所",
     heroEyebrow: "POiSE 孵化計畫 · 私人測試", heroTitle: "你的參與和回饋，會讓所有人都受益", heroTitlePunctuation: "…",
@@ -66,7 +66,7 @@ const translations = {
   fr: {
     ...en,
     metaTitle: "POiSE Incubator | Pilote privé", metaDescription: "POiSE Incubator est un programme pilote privé et limité pour contribuer à la prochaine version de l’app POiSE.",
-    skipLink: "Aller au contenu", brandAria: "POiSE Incubator", brandSubtitle: "Incubator",
+    skipLink: "Aller au contenu", brandAria: "POiSE Incubator", brandSubtitle: "Incubator", officialSiteLink: "Site",
     navAria: "Navigation principale", navIncluded: "Ce qui est inclus", navJourney: "Fonctionnement", navApply: "Candidater", languageLabel: "Choisir la langue",
     heroExchangeLabel: "PLATEFORME DU PILOT",
     heroEyebrow: "POiSE INCUBATOR · PILOTE PRIVÉ", heroTitle: "Votre participation et vos retours profitent à tous", heroTitlePunctuation: "…",
@@ -97,7 +97,7 @@ const translations = {
   ar: {
     ...en,
     metaTitle: "حاضنة POiSE | تجربة خاصة", metaDescription: "حاضنة POiSE تجربة خاصة ومحدودة للمساهمة في تطوير الإصدار القادم من تطبيق POiSE.",
-    skipLink: "الانتقال إلى المحتوى", brandAria: "حاضنة POiSE", brandSubtitle: "الحاضنة",
+    skipLink: "الانتقال إلى المحتوى", brandAria: "حاضنة POiSE", brandSubtitle: "الحاضنة", officialSiteLink: "الموقع",
     navAria: "التنقل الرئيسي", navIncluded: "ما الذي ستحصل عليه", navJourney: "كيف تعمل", navApply: "التقديم", languageLabel: "اختيار اللغة",
     heroExchangeLabel: "المنصة المدعومة في PILOT",
     heroEyebrow: "حاضنة POiSE · تجربة خاصة", heroTitle: "مشاركتك وملاحظاتك تعودان بالنفع على الجميع", heroTitlePunctuation: "…",
@@ -128,7 +128,7 @@ const translations = {
   ja: {
     ...en,
     metaTitle: "POiSE Incubator | プライベートパイロット", metaDescription: "POiSE Incubatorは、POiSE Appの次期リリースを共につくる少人数制のプライベートパイロットです。",
-    skipLink: "本文へ移動", brandAria: "POiSE Incubator", brandSubtitle: "Incubator",
+    skipLink: "本文へ移動", brandAria: "POiSE Incubator", brandSubtitle: "Incubator", officialSiteLink: "公式サイト",
     navAria: "メインナビゲーション", navIncluded: "参加特典", navJourney: "参加の流れ", navApply: "応募", languageLabel: "言語を選択",
     heroExchangeLabel: "PILOT対応取引所",
     heroEyebrow: "POiSE INCUBATOR · プライベートパイロット", heroTitle: "あなたの参加とフィードバックが、すべての人の役に立ちます", heroTitlePunctuation: "…",
@@ -159,7 +159,7 @@ const translations = {
   ko: {
     ...en,
     metaTitle: "POiSE Incubator | 비공개 파일럿", metaDescription: "POiSE Incubator는 POiSE App의 다음 버전을 함께 만드는 소규모 비공개 파일럿입니다.",
-    skipLink: "본문으로 이동", brandAria: "POiSE Incubator", brandSubtitle: "Incubator",
+    skipLink: "본문으로 이동", brandAria: "POiSE Incubator", brandSubtitle: "Incubator", officialSiteLink: "공식 사이트",
     navAria: "주요 탐색", navIncluded: "참여 혜택", navJourney: "진행 방식", navApply: "신청", languageLabel: "언어 선택",
     heroExchangeLabel: "PILOT 지원 거래소",
     heroEyebrow: "POiSE INCUBATOR · 비공개 파일럿", heroTitle: "여러분의 참여와 피드백이 모두에게 도움이 됩니다", heroTitlePunctuation: "…",
@@ -217,6 +217,22 @@ function applyLanguage(language, updateUrl = false) {
     if (value) element.setAttribute("aria-label", value);
   });
   languageSelect.value = language;
+  const officialSiteLink = document.querySelector("[data-official-site-link]");
+  if (officialSiteLink) {
+    const isLocal = ["localhost", "127.0.0.1"].includes(window.location.hostname);
+    const siteUrl = new URL(officialSiteLink.href);
+    if (isLocal) {
+      siteUrl.protocol = window.location.protocol;
+      siteUrl.hostname = window.location.hostname;
+      siteUrl.port = "4178";
+      siteUrl.pathname = language === "zh-Hant" ? "/zh-hant/" : "/";
+    } else {
+      siteUrl.pathname = language === "zh-Hant" ? "/poise-site/zh-hant/" : "/poise-site/";
+    }
+    if (language === "en" || language === "zh-Hant") siteUrl.searchParams.delete("lang");
+    else siteUrl.searchParams.set("lang", language);
+    officialSiteLink.href = siteUrl.toString();
+  }
   window.localStorage.setItem("poise.site.language", language);
   if (updateUrl) {
     const url = new URL(window.location.href);

@@ -24,6 +24,8 @@ a { color: inherit; }
 .topbar-inner, .footer-inner { align-items: center; display: flex; gap: 24px; justify-content: space-between; }
 .topbar-inner { min-height: 76px; }
 .topbar-actions { align-items: center; display: flex; gap: 22px; }
+.official-site-link { color: var(--muted); font-size: 0.8rem; text-decoration: none; white-space: nowrap; }
+.official-site-link:hover, .official-site-link:focus-visible { color: #e8cf97; }
 .brand { align-items: center; display: inline-flex; gap: 10px; text-decoration: none; }
 .brand-logo { display: block; height: 36px; object-fit: cover; width: 36px; }
 .brand-copy { min-width: 0; }
@@ -134,10 +136,12 @@ footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.8r
 
 @media (max-width: 680px) {
   .wrap { width: min(100% - 32px, 1120px); }
-  .topbar-inner { align-items: center; flex-direction: row; padding: 14px 0; }
+  .topbar-inner { align-items: center; flex-direction: row; gap: 8px; padding: 14px 0; }
   .footer-inner { align-items: flex-start; flex-direction: column; padding: 16px 0; }
-  .topbar-actions { align-items: center; flex-direction: row; gap: 0; margin-left: auto; width: auto; }
+  .topbar-actions { align-items: center; flex-direction: row; gap: 10px; margin-left: auto; width: auto; }
+  .official-site-link { font-size: 0.72rem; }
   .language-select { align-self: center; }
+  .language-select select { min-width: 72px; padding-right: 4px; }
   .hero { padding: 64px 0; }
   .hero-topline { align-items: flex-start; flex-direction: column; gap: 14px; }
   .hero-exchange, [dir="rtl"] .hero-exchange { border-left: 0; border-right: 0; padding-left: 0; padding-right: 0; }
@@ -155,6 +159,10 @@ footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.8r
   .risk-layout { gap: 22px; grid-template-columns: 1fr; }
   .invitation-note, [dir="rtl"] .invitation-note { border-left: 0; border-right: 0; border-top: 3px solid #127446; padding: 24px 0 0; }
   nav a, h1, h2, h3, .lead, .button, .cohort-panel, .checklist li { overflow-wrap: anywhere; }
+}
+
+@media (max-width: 340px) {
+  .brand small { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
