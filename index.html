@@ -13,7 +13,7 @@
     <meta property="og:title" content="POiSE Incubator | Private pilot" />
     <meta property="og:description" content="Help shape the next POiSE App release in a limited private pilot." />
     <meta property="og:url" content="https://but78183-hue.github.io/poise-invite-beta/" />
-    <link rel="stylesheet" href="./assets/site.css" />
+    <link rel="stylesheet" href="./assets/site.css?v=20260825-strip-controls" />
   </head>
   <body>
     <a class="skip-link" href="#main-content" data-i18n="skipLink">Skip to content</a>
@@ -24,21 +24,20 @@
           <span class="brand-copy"><strong>POiSE</strong><small data-i18n="brandSubtitle">Incubator</small></span>
         </a>
         <div class="topbar-actions">
-          <label class="language-select">
-            <span class="visually-hidden" data-i18n="languageLabel">Choose language</span>
-            <svg class="language-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-              <circle cx="12" cy="12" r="9"></circle>
-              <path d="M3 12h18M12 3c2.3 2.5 3.5 5.5 3.5 9S14.3 18.5 12 21M12 3c-2.3 2.5-3.5 5.5-3.5 9S9.7 18.5 12 21"></path>
-            </svg>
-            <select id="language-select" aria-label="Choose language" data-i18n-aria-label="languageLabel">
-              <option value="en">English</option>
-              <option value="zh-Hant">繁體中文</option>
-              <option value="fr">Français</option>
-              <option value="ar">العربية</option>
-              <option value="ja">日本語</option>
-              <option value="ko">한국어</option>
-            </select>
-          </label>
+          <details class="site-language-switch">
+            <summary aria-label="Choose language" title="Choose language" data-i18n-aria-label="languageLabel">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.3 2.5 3.5 5.5 3.5 9S14.3 18.5 12 21M12 3c-2.3 2.5-3.5 5.5-3.5 9S9.7 18.5 12 21"/></svg>
+              <span data-i18n="languageLabel">Choose language</span>
+            </summary>
+            <div class="site-language-menu" role="menu">
+              <a href="?lang=en" lang="en" role="menuitem"><span>English</span><b>EN</b></a>
+              <a href="?lang=zh-Hant" lang="zh-Hant" role="menuitem"><span>繁體中文</span><b>繁</b></a>
+              <a href="?lang=fr" lang="fr" role="menuitem"><span>Français</span><b>FR</b></a>
+              <a href="?lang=ar" lang="ar" role="menuitem"><span>العربية</span><b>AR</b></a>
+              <a href="?lang=ja" lang="ja" role="menuitem"><span>日本語</span><b>日</b></a>
+              <a href="?lang=ko" lang="ko" role="menuitem"><span>한국어</span><b>한</b></a>
+            </div>
+          </details>
         </div>
       </div>
       <div class="official-site-strip">
@@ -52,6 +51,9 @@
             <span data-i18n="officialSiteLink">Back to website</span>
           </a>
         </div>
+        <button class="strip-dismiss" type="button" aria-label="Close website notice" title="Close website notice" data-strip-dismiss data-i18n-aria-label="closeNotice">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
       </div>
     </header>
 
